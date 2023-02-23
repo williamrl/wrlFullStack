@@ -3,7 +3,8 @@ function getMax(first, second, third) {
     if (first > second) {
         if (first > third) {
             return first;
-        } return third;
+        }
+    return third;
     } else if (second > third) {
         return second;
     } else {
