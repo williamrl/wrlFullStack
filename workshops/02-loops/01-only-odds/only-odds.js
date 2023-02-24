@@ -9,3 +9,11 @@
 // onlyOdds(6); // => 9 (5 + 3 + 1)
 // ```
 
+const onlyOdds = (numOne) => {
+    for (let i = numOne; i >= 1; i--) {
+        if (i % 2 === 1) {
+            sum += i;
+        }
+    }
+    return sum;
+}
