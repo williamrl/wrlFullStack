@@ -10,6 +10,8 @@
 // ```
 
 const onlyOdds = (numOne) => {
+    let sum = 0;
+
     for (let i = numOne; i >= 1; i--) {
         if (i % 2 === 1) {
             sum += i;
