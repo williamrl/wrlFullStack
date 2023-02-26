@@ -34,15 +34,24 @@
 
 
 const mySlice = (originalString, startIdx, endIdx) => {
-    let retStr = originalString;
-
-    for (let i = 0; i < originalString.length; i++) {
-        if (startIdx != undefined && endIdx != undefined) {
-            retStr = originalString[i];
-        }
-
-        return retStr;
+    if (startIdx === undefined) {
+        return originalString
     }
+
+    if (endIdx === undefined) {
+        endIdx = originalString.length;
+    }
+
+    let slicedStr = '';
+
+    for (let i = startIdx; i < endIdx; i++) {
+        let char = originalString[i];
+
+        slicedStr += char;
+    }
+
+    return slicedStr;
 }
 
 console.log(mySlice('slice and dice', 2));
+console.log(mySlice('slice and dice', 2, 5));
