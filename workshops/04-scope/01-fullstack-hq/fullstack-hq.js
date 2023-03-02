@@ -1,3 +1,5 @@
+#!.usr/bin/env node
+console.log('\x1Bc');
 // Edit the code below
 // Refactor the function `fullstackHQ` so that it returns the correct string:
 

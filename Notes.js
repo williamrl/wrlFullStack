@@ -1,3 +1,6 @@
+//quickly run a program #!.usr/bin/env node
+//console.log('\x1Bc');
+
 /*
 FOR LOOP NOTES:
 
@@ -81,4 +84,15 @@ console.log(block); //global scope
 -avoid cluttering the global namespace with lots of variable
 -only declare variables globally if they need to be accessed globally
 -its safer to declare variables in functions or blocks so you dont overwrite variables accidently
+*/
+
+/*
+ARRAYS:
+An array is a list-like data structure in JavaScript
+ex.:
+let numbers = [1, 2, 3];
+    ^array name ^data in the array
+
+typeOf[]
+let names = ["George", "John", ]
 */
