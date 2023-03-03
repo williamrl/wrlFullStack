@@ -88,11 +88,59 @@ console.log(block); //global scope
 
 /*
 ARRAYS:
-An array is a list-like data structure in JavaScript
+-An array is a list-like data structure in JavaScript
 ex.:
 let numbers = [1, 2, 3];
     ^array name ^data in the array
 
-typeOf[]
-let names = ["George", "John", ]
+-typeof:
+let names = ["George", "John", "Scott"]
+console.log(typeof name); -> returns object because an array is an object technically
+
+-Array.isArray():
+//checks if the variable is an array
+console.log(Array.isArray(names));
+
+-Bracket Access:
+names[0] -> "George" //arrays are 0 indexed
+
+-bracket access helps accessing an array at a specific index. '
+-also allows editing the array
+
+names[0] = "David" -> "george" becomes "david"
+
+-access last element of the arr
+console.log(names[names.length - 1]); //array is zero indexed so to get proper index you need to subtract 1
+
+-add to end of array
+names.push("Jane"); -> adds Jane to the end of the array (pushing something to the end)
+
+-remove and return from end of array
+let latestAdd = names.pop(); -> removed Jane from the array and added it to variable 
+(the variable isnt necessary you can just remove with .pop())
+
+- remove first element of array
+let firstElRemoved = names.shift(); -> removes first element which is David (can be returned to variable just like pop() but unnecessary)
+
+-add to first element of array
+names.unShift("George"); -> adds george to the beginning of the array
+
+-query the array (find an item in the array)
+names.indexOf("George"); -> returns 0 (first position of the array) will return -1 if item not found (does not exist in the array)
+
+-extract a portion of the array
+names.slice(0,1); -> returns the 0 index //it will return to initial index given and slice(stop) right before the final index given
+names.slice(0,2); -> returns the 0 and 1 index
+names.slice(1); will return everything after the 0 index (does not require a start and finish)
+
+let namesCopy = names.slice(); -> creates a new array/a copy of the original
+namesCopy[0] = "Kate"; //changes the 0 index of the copy not the original
+
+-includes method (new way to query)
+names.includes("George"); -> will return true
+names.includes("Elizabeth") - > will return false
+
+-reverse method (modifies the array! caution)
+names.reverse(); -> reverses in place and does not return anything
+
 */

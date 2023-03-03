@@ -15,3 +15,25 @@
 // oddCouple([10, 15, 20]); // => [15]
 // oddCouple(2, 4, 6, 8); // => []
 // ```
+
+const oddCouple = (arrOfNums) => {
+    const oddArr = [];
+
+    for (let i = 0; i < arrOfNums.length; ++i) {
+        const currentNum = arrOfNums[i];
+
+        if(currentNum % 2 === 1) {
+            oddArr.push(currentNum);
+        }
+
+        if (oddArr.length === 2) {
+            return oddArr;
+        }
+    }
+
+    return oddArr;
+}
+
+console.log(oddCouple([1, 2, 3, 4, 5]));
+console.log(oddCouple([10, 15, 20]));
+console.log(oddCouple(2, 4, 6, 8));
