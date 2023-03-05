@@ -143,4 +143,35 @@ names.includes("Elizabeth") - > will return false
 -reverse method (modifies the array! caution)
 names.reverse(); -> reverses in place and does not return anything
 
+
+-splice method (a mutator) used to add or remove from middle of the array
+first arg is an index second is a count of elements to remove
+also returns a new array with all deleted elements
+
+let beatles = ['Paul', 'George', 'John', 'Ringo'];
+let newGroup = beatles.splice(1, 2); -> returns george and john in a new array
+
+(let newGroup = beatles.splice(1, 2, "Pete", "Nimit")); -> would remove george and john
+    from the original array and add pete and nimit in their place)
+
+can also add without removing by doing the above with a starting index and no second arg
+
+-join method
+let sentence = "The Beatles were " + beatles.join(", ");
+this allows you to join an array with a string using specific customization
+
+-Concat methods (join two arrays)
+let older = ['Ringo', 'John'];
+let younger = ['Paul', 'George'];
+
+console.log(older.concat(younger)); -> older takes in younger array
+
+-multi-dimensional arrays-
+let relatedThings = [['Windows', 'MacOS'],['New York', 'Chicago']];
+console.log(relatedThings[1][0]); -> returns New York from the nested arrays
+
+let rsvpGroups = [['Jane', 'Mel'], 'Jack', ['Rohan', 'David', 'Meg']];
+for (let i = 0; i < rsvpGroups.length; i++) {
+    
+}
 */
