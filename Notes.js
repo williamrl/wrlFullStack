@@ -108,25 +108,32 @@ names[0] -> "George" //arrays are 0 indexed
 -also allows editing the array
 
 names[0] = "David" -> "george" becomes "david"
+==========
 
 -access last element of the arr
 console.log(names[names.length - 1]); //array is zero indexed so to get proper index you need to subtract 1
+==========
 
 -add to end of array
 names.push("Jane"); -> adds Jane to the end of the array (pushing something to the end)
+==========
 
 -remove and return from end of array
 let latestAdd = names.pop(); -> removed Jane from the array and added it to variable 
 (the variable isnt necessary you can just remove with .pop())
+==========
 
 - remove first element of array
 let firstElRemoved = names.shift(); -> removes first element which is David (can be returned to variable just like pop() but unnecessary)
+==========
 
 -add to first element of array
 names.unShift("George"); -> adds george to the beginning of the array
+==========
 
 -query the array (find an item in the array)
 names.indexOf("George"); -> returns 0 (first position of the array) will return -1 if item not found (does not exist in the array)
+==========
 
 -extract a portion of the array
 names.slice(0,1); -> returns the 0 index //it will return to initial index given and slice(stop) right before the final index given
@@ -135,14 +142,16 @@ names.slice(1); will return everything after the 0 index (does not require a sta
 
 let namesCopy = names.slice(); -> creates a new array/a copy of the original
 namesCopy[0] = "Kate"; //changes the 0 index of the copy not the original
+==========
 
 -includes method (new way to query)
 names.includes("George"); -> will return true
 names.includes("Elizabeth") - > will return false
+==========
 
 -reverse method (modifies the array! caution)
 names.reverse(); -> reverses in place and does not return anything
-
+==========
 
 -splice method (a mutator) used to add or remove from middle of the array
 first arg is an index second is a count of elements to remove
@@ -155,23 +164,50 @@ let newGroup = beatles.splice(1, 2); -> returns george and john in a new array
     from the original array and add pete and nimit in their place)
 
 can also add without removing by doing the above with a starting index and no second arg
+==========
 
 -join method
 let sentence = "The Beatles were " + beatles.join(", ");
 this allows you to join an array with a string using specific customization
+==========
 
 -Concat methods (join two arrays)
 let older = ['Ringo', 'John'];
 let younger = ['Paul', 'George'];
 
 console.log(older.concat(younger)); -> older takes in younger array
-
+==========
 -multi-dimensional arrays-
 let relatedThings = [['Windows', 'MacOS'],['New York', 'Chicago']];
 console.log(relatedThings[1][0]); -> returns New York from the nested arrays
+==========
 
 let rsvpGroups = [['Jane', 'Mel'], 'Jack', ['Rohan', 'David', 'Meg']];
 for (let i = 0; i < rsvpGroups.length; i++) {
-    
+    let element = rsvpGroups[i];
+
+    if (Array.isArray(element)){
+        for (let j = 0; j < element.length; j++) {
+            console.log(element[j]);
+        }
+    } else {
+        console.log(element);
+    }
+} -> returns a list of each element extracted out of the m.d.array
+==========
+
+let grid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+
+console.log(grid[1]); -> [4,5,6]
+
+let secondCol = [];
+for (let i = 0; i < grid.length; i++) {
+    secondCol.push(grid[i][1]);
 }
+console.log(secondCol); -> [2,5,8]
+==========
 */
