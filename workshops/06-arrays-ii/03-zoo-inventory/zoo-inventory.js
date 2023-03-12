@@ -20,5 +20,26 @@
 // ```
 
 const zooInventory = (animalFactsMDA) => {
-    
+    let emptyArr = [];
+
+    for (let i = 0; i < animalFactsMDA.length; i++) {
+        let element = animalFactsMDA[i];
+
+        let name = element[0];
+        let species = element[1][0];
+        let age = element[1][1];
+
+        let sentence = `${name} the ${species} is ${age}.`;
+
+        emptyArr.push(sentence);
+    }
+    return emptyArr;
 }
+
+let myZoo = [
+    ['King Kong', ['gorilla', 42]],
+    ['Nemo', ['fish', 5]],
+    ['Punxsutawney Phil', ['groundhog', 11]]
+];
+
+console.log(zooInventory(myZoo));
