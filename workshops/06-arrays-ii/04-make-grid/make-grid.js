@@ -16,8 +16,21 @@
 // ```
 
 const makeGrid = (numColumns, numRows) => {
-    let emptyMDA = [];
+    const makeARow = () => {
+        let aRow = [];
 
-    
+        for (let i = 1; i <= numColumns.length; ++i) {
+            aRow.push(i);
+        }
+        return aRow;
+    }
 
+    let grid = [];
+
+    for (let i = 0; i < numRows.length; ++i) {
+        grid.push(makeARow());
+    }
+    return grid;
 }
+
+console.log(makeGrid(3, 4)); 
