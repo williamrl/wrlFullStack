@@ -16,20 +16,18 @@
 // ```
 
 const makeGrid = (numColumns, numRows) => {
-    const makeARow = () => {
-        let aRow = [];
-
-        for (let i = 1; i <= numColumns.length; ++i) {
-            aRow.push(i);
-        }
-        return aRow;
-    }
-
     let grid = [];
 
-    for (let i = 0; i < numRows.length; ++i) {
-        grid.push(makeARow());
+    for (let i = 0; i < numRows; i++) {
+        let row = [];
+
+        for (let j = 0; j < numColumns; j++) {
+            row.push(j + 1);
+        }
+
+        grid.push(row)
     }
+
     return grid;
 }
 
